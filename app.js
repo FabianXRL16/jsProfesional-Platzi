@@ -9,9 +9,13 @@ MediaPlayer.prototype.play = function(){
     this.media.play()
 }
 
+MediaPlayer.prototype.pause = function(){
+    this.media.pause()
+}
+
 MediaPlayer.prototype.toggleClick = function(){
-    this.media.paused ? this.media.play()
-    : this.media.pause()
+    this.media.paused ? this.play()
+    : this.pause()
 }
 
 const player = new MediaPlayer({el: video})
